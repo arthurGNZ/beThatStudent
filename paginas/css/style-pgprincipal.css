@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 100%;
+    background: #fa3757;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    color: #000;
+}
+
+header .logo {
+    position: relative;
+    max-width: 80px;
+}
+header .avatar{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #fa3757;
+}
+header .avatar:hover{
+    color: #fff;
+    background: #b7001f;
+    cursor: pointer;
+}
+header .secaoCabecalho{
+    display: flex;
+    align-items: center;
+}
+header p{
+    font-weight: bold;
+    color: #fff;
+    margin-left: 2.5em;
+}
+main {
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 30px;
+}
+main article{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+main article a{
+    width: 25%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fc4765;
+    margin-right: 10%;
+    text-decoration: none;
+    color: #fff;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 50px;
+}
+main article a:hover{
+    background: #f23555;
+    }
+
+main article a:last-of-type{
+    margin-right: 0;
+}
+i{
+    margin-bottom: 10px;
+}
+
+main .botaoPrincipal{
+    margin: 0 auto;
+    width: 80%;
+    background:#fa3757;/*#f6264d*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5em;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 20px;
+}
+
+@media (max-width:991px) {
+    header{
+        padding: 20px 0px;
+        justify-content: center;
+    }
+    header p{
+        font-size: 20px;
+    }
+    header .avatar, .logo{
+        display: none;
+    }
+    main article{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+    main article a{
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    main article a:last-of-type{
+        margin: 0 auto;
+    }
+    main article:last-of-type{
+        margin-bottom: 25px;
+    }
+    main .botaoPrincipal{
+        margin-bottom: 20px;
+    }
+}
