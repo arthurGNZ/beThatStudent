@@ -46,10 +46,10 @@
                             $idUsuario = $objBD->selectWhere('usuario', 'email',$email);
                             header('Location:./paginaPrincipal.php?email='.$email);
                         } else {
-                            echo 'E-mail ou Senha incorreta!';
+                            echo 'E-mail ou Senha incorretos!';
                         }
                     } else {
-                        echo 'E-mail ou Senha incorreta!';
+                        echo 'E-mail ou Senha incorretos!';
                     }
                 }
                 ?>
