@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be that Student</title>
+    <title>Be that Student</title><!--Commit 1-->
 </head>
 
 <body>
