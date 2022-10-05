@@ -47,7 +47,7 @@ $result = $objBD->selectWhere('usuario', 'email', $idUsuario);
                 <i class="fa-solid fa-plus fa-xl"></i>
                 <p>Criar projeto</p>
             </a>
-            <a href="#">
+            <a href="./criarTarefa.php?id=<?php echo $result->id?>">
                 <i class="fa-solid fa-plus fa-xl"></i>
                 <p>Criar tarefa</p>
             </a>

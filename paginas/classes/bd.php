@@ -36,6 +36,13 @@ class BD
         $st->execute();
         return $st->fetchObject();
     }
+    public function selectWhere2($tabela, $coluna, $valor)
+    {
+        $conn = $this->conn();
+        $st = $conn->prepare("SELECT * FROM $tabela WHERE $coluna = '$valor'; ");
+        $st->execute();
+        return $st;
+    }
     public function insert($dados, $tabela, $colunas)
     {
         unset($dados['id']);

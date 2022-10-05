@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/style-criacao.css" rel='stylesheet' />
+    <link href="./css/style-criar.css" rel='stylesheet' />
     <script src="https://kit.fontawesome.com/8fd4fa4b09.js" crossorigin="anonymous"></script>
     <title>Criar Projeto</title>
 </head>
@@ -21,16 +21,20 @@
         </div>
         <i class="fa-solid fa-user avatar"></i>
     </header>
-    <main >
+    <main>
         <form class="card-login" action="criarProjeto.php">
-            <input type='text' name='nome' placeholder='Nome do projeto' required/>
-            <input type='text' name='descricao' placeholder="Descrição do proejto"/>
+            <input type='text' name='nome' placeholder='Nome do projeto' required autocomplete="off"/>
             <input type="hidden" name='idUsuario' value="<?php echo $_GET['id']?>"/>
             <input type="submit" name='Criar Projeto'/>
             <?php
                 if(!empty($_GET['nome'])){
-                    $objBD->insert();
-                    echo 'Conta criada !';
+                    $nome = $_GET['nome'];
+                    $id = $_GET['idUsuario'];
+                    $dados = [$nome, 0, $id];
+                    $objBD->insert($dados, 'projeto', 'nome, tempoEstudo, idUsuario');
+                    $usuario = $objBD->selectWhere('usuario', 'id', $id);
+                    $email = $usuario->email;
+                    header('Location:./paginaPrincipal.php?email='.$email);
                 }
             ?>
         </form>
