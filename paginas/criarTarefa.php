@@ -31,7 +31,7 @@
                 <?php
                 $projetos = $objBD->selectWhere2('projeto', 'idUsuario', $_GET['id']);
                 foreach ($projetos as $proj) {
-                    echo "<option value='" . $proj['id'] . "'>" . $proj['nome'] . "<option>";
+                    echo "<option value='" . $proj['id'] . "'>" . $proj['nome'];
                 }
                 ?>
             </select>
@@ -45,8 +45,8 @@
                 $descricao = $_GET['descricao'];
                 $id = $_GET['idUsuario'];
                 $idProjeto = $_GET['projeto'];
-                $dados = [$nome, $descricao, 0, $idProjeto];
-                $objBD->insert($dados, 'tarefa', 'nome, descricao, tempoEstudo, idProjeto');
+                $dados = [$nome, $descricao, 0, $idProjeto, $id];
+                $objBD->insert($dados, 'tarefa', 'nome, descricao, tempoEstudo, idProjeto, idUser');
                 $usuario = $objBD->selectWhere('usuario', 'id', $id);
                 $email = $usuario->email;
                 header('Location:./paginaPrincipal.php?email=' . $email);

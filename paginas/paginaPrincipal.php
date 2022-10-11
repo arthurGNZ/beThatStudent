@@ -52,7 +52,7 @@ $result = $objBD->selectWhere('usuario', 'email', $idUsuario);
                 <p>Criar tarefa</p>
             </a>
         </article>
-        <a href='#' class="botaoPrincipal">
+        <a href='estudo/entrada.php?id=<?php echo $result->id?>' class="botaoPrincipal">
             <p> <i class="fa-solid fa-play fa-xl"></i> Iniciar estudo</p>
         </a>
     </main>

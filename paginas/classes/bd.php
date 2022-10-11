@@ -73,26 +73,14 @@ class BD
         return $stmt->fetchObject(); //retornando os dados como objeto -> fica mais fácil para acessar
     }
 
-    public function update($dados)
+    public function update($tabela, $dados, $id)
     {
-        $id = $dados['id'];
-        $sql = "UPDATE usuario SET ";
+        $sql = "UPDATE $tabela SET $dados WHERE id = $id";
         $flag = 0;
-        $arrayValor = [];
-        foreach ($dados as $campo => $valor) {
-            if ($flag == 0) {
-                $sql .= "$campo = ?";
-            } else {
-                $sql .= ", $campo = ?";
-            }
-            $flag = 1;
-            $arrayValor[] = $valor;
-        }
-        $sql .= "WHERE id = $id;";
 
         $conn = $this->conn();
         $stmt = $conn->prepare($sql);
-        $stmt->execute($arrayValor);
+        $stmt->execute();
 
         return $stmt;
     }
