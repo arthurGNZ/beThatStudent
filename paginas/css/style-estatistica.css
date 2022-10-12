@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-header {
+.cabecalho {
     width: 100%;
     background: #fa3757;
     display: flex;
@@ -16,11 +17,12 @@ header {
     color: #000;
 }
 
-header .logo {
+.cabecalho .logo {
     position: relative;
     max-width: 80px;
 }
-header .avatar{
+
+.cabecalho .avatar {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -30,16 +32,22 @@ header .avatar{
     background: #fff;
     color: #fa3757;
 }
-header .avatar:hover{
+
+.cabecalho .avatar:hover {
     color: #fff;
     background: #b7001f;
     cursor: pointer;
 }
-header .secaoCabecalho{
+.titulo{
+    color: #fa3757;
+    margin-top: 3.5vh;
+}
+.cabecalho .secaoCabecalho {
     display: flex;
     align-items: center;
 }
-header p{
+
+.cabecalho p {
     font-weight: bold;
     color: #fff;
     margin-left: 2.5em;
@@ -60,16 +68,19 @@ header p{
     padding-bottom: 5%;
 }
 
-.card-login h1{
+.card-login h1 {
     font-size: 60px;
     margin-bottom: 1em;
     text-align: center;
 }
-.card-login p{
+
+.card-login p {
     font-size: 30px;
     text-align: justify;
 }
-input[type=text]{
+
+input[type=text],
+input[type=email] {
     width: 100%;
     border: none;
     border-radius: 10px;
@@ -79,8 +90,20 @@ input[type=text]{
     box-shadow: 0px 10px 40px #00000056;
     outline: none;
     box-sizing: border-box;
-    margin-bottom:20px;
+    margin-bottom: 20px;
     /* div filha não pode ultrapassar tamanho da div pai*/
+}
+
+select {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    font-size: 12pt;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
 }
 
 input[type=submit] {
@@ -96,22 +119,41 @@ input[type=submit] {
     font-weight: 800;
     letter-spacing: 3px;
     color: #303030;
-    background:#fa3757;
+    background: #fa3757;
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px  #b7001f;
-    
+    box-shadow: 0px 10px 40px -12px #b7001f;
 }
-
+.card-login a{
+    width: 100%;
+    padding: 16px 0px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    /*deixar todas letras do texto maiúsculas*/
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #303030;
+    background: #fa3757;
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px #b7001f;
+    text-decoration: none;
+    text-align: center;
+}
 @media (max-width:991px) {
     .card-login {
         margin-top: 30%;
         padding: 10%;
         width: 98%;
     }
-    .card-login h1{
+
+    .card-login h1 {
         font-size: 40px;
     }
-    .card-login p{
+
+    .card-login p {
         font-size: 20px;
         text-align: center;
     }

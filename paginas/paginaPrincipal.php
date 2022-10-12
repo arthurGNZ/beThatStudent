@@ -13,6 +13,7 @@
 $objBD = new BD();
 $idUsuario = $_GET['email'];
 $result = $objBD->selectWhere('usuario', 'email', $idUsuario);
+
 ?>
 
 <body>
@@ -25,15 +26,15 @@ $result = $objBD->selectWhere('usuario', 'email', $idUsuario);
     </header>
     <main>
         <article>
-            <a href="#">
+            <a href="./minhaconta.php?id=<?php echo $result->id?>">
                 <i class="fa-solid fa-user fa-xl"></i>
-                <p>Minha conta</p>
+                <p>Editar conta</p>
             </a>
-            <a href="#">
+            <a href="./comoFunciona.php?id=<?php echo $result->id?>">
                 <i class="fa-sharp fa-solid fa-question fa-xl"></i>
                 <p>Como funciona</p>
             </a>
-            <a href="#">
+            <a href="./estatisticas.php?id=<?php echo $result->id?>">
                 <i class="fa-sharp fa-solid fa-chart-simple fa-xl"></i>
                 <p>Minhas estatísticas</p>
             </a>

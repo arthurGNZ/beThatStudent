@@ -69,6 +69,15 @@ header p{
     font-size: 30px;
     text-align: justify;
 }
+.card-login .imgs{
+    max-width: 60%;
+    border: #000 solid 1px;
+    margin-bottom: 30px;
+}
+.card-login .imgsMobile{
+    display: none;
+}
+
 input[type=text]{
     width: 100%;
     border: none;
@@ -114,5 +123,14 @@ input[type=submit] {
     .card-login p{
         font-size: 20px;
         text-align: center;
+    }
+    .card-login .imgs{
+        display: none;
+    }
+    .card-login .imgsMobile{
+        display: block;
+        max-width: 60%;
+        border: #000 solid 1px;
+        margin-bottom: 30px;
     }
 }

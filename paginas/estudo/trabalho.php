@@ -36,7 +36,7 @@
 
   document.getElementById('demo').innerHTML = minutes + 'm ' + seconds + 's ';
 
-  if(counter == 6){
+  if(counter == 4){
     window.location.href='./fimciclo.php?tarefa=" . $_GET['tarefa'] . "&id=" . $_GET['id'] . "';
   }
   if (distance < 0) {

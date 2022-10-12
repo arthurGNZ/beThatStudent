@@ -17,7 +17,7 @@
             <div class="toggle" onclick="toggleMenu();"></div>
             <ul class="navigation">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre nós</a></li>
+                <li><a href="paginas/sobreNos.php">Sobre nós</a></li>
                 <li><a href="paginas/criarConta.php">Criar Conta</a></li>
                 <li><a href="paginas/login.php">Entrar</a></li>
             </ul>

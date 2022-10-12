@@ -27,7 +27,6 @@
                     <input type="password" name="senha" placeholder="Senha" required>
                 </div>
                 <a href="criarConta.php" class="criar-conta">Ainda não tem conta? Clique aqui</a>
-                <a href='paginaPrincipal.php?email=arthur@gmail.com'>logar direto</a>
                 <button class="btn-login">Fazer login</button>
                 <?php
                 include "classes/bd.php";

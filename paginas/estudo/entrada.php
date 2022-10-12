@@ -12,11 +12,12 @@
 <body>
     <?php include "../classes/bd.php";
     $objBD = new BD();
-
+    $id = $_GET['id'];
+    $result = $objBD->selectWhere('usuario', 'id', $id);
     ?>
     <header>
         <div class="secaoCabecalho">
-            <a href=<?php echo $_SERVER['HTTP_REFERER']; ?> style="color:white;"><i class="fa-solid fa-arrow-left fa-2xl"></i></a>
+        <a href='../paginaPrincipal.php?email=<?php echo $result->email; ?>' ; style="color:white;"><i class="fa-solid fa-arrow-left fa-2xl"></i></a>
         </div>
         <i class="fa-solid fa-user avatar"></i>
     </header>
