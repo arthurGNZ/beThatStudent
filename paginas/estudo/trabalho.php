@@ -25,6 +25,8 @@
   }
   echo
   "<script>
+  var audio = new Audio('bip.mp3');
+  audio.play();
   let now = new Date().getTime();
   var countDownDate = now+1500000;
   var counter =" . $time . ";
@@ -41,6 +43,7 @@
   }
   if (distance < 0) {
     clearInterval(x);
+    audio.play();
     counter++;
     window.location.href='./descanco.php?time='+counter+'&tarefa=" . $_GET['tarefa'] . "&id=" . $_GET['id'] . "';
     }

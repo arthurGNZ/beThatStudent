@@ -21,7 +21,6 @@
 <?php
 $time = $_GET['time'];
 echo "<script>
-
 let now = new Date().getTime();
 var countDownDate = now+300000;
 var counter =".$time.";

@@ -32,7 +32,7 @@
         <p>Com o projeto e tarefa criados, clique em iniciar estudo, lá será possível escolher a tarefa que você deseja estudar.</p>
         <img src="img/iniciarEstudo.png" class="imgs">
         <img src="img/iniciarEstudoMobile.png" class="imgsMobile">
-        <p>A sessão de estudo consistem em um estudo de 25 minutos trabalho, 5 minutos de descanso, 25 minutos de trabalho, 5 minutos de descanso e após isso a sessão será finalizada.</p>
+        <p>A sessão de estudo consistem em 25 minutos de trabalho, 5 minutos de descanso, 25 minutos de trabalho, 5 minutos de descanso e após isso a sessão será finalizada.</p>
         <img src="img/estudo.png" class="imgs">
         <img src="img/estudoMobile.png" class="imgsMobile">
         <p>A sessão só será contabilizada caso todas as etapas sejam concluidas.</p>
