@@ -28,7 +28,8 @@
             <?php
             $tarefas = $objBD->selectWhere2('tarefa', 'idUser', $_GET['id']);
             foreach ($tarefas as $proj) {
-                echo "<option value='" . $proj['id'] . "'>" . $proj['nome'];
+                $projetos = $objBD->selectWhere('projeto','id',$proj['idProjeto']);
+                echo "<option value='" . $proj['id'] . "'>" . $proj['nome'].' - '.$projetos->nome."</option>";
             }
             ?>
         </select>

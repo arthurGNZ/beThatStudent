@@ -92,6 +92,20 @@ class BD
         $stmt->execute([$id]);
         return $stmt;
     }
+    public function removeTarefa($id)
+    {
+        $conn = $this->conn();
+        $stmt = $conn->prepare("DELETE FROM tarefa WHERE id=?;");
+        $stmt->execute([$id]);
+        return $stmt;
+    }
+    public function removeProjeto($id)
+    {
+        $conn = $this->conn();
+        $stmt = $conn->prepare("DELETE FROM projeto WHERE id=?;");
+        $stmt->execute([$id]);
+        return $stmt;
+    }
     public function search($valor, $tipo)
     {
         $conn = $this->conn();
